@@ -1,0 +1,27 @@
+site_name: gping for Mere Mortals
+site_description: Ping with a graph drawn live in your terminal. Reading the line, the gaps and the statistics, graphing several targets and even a command's running time, and knowing exactly what an echo reply does and does not prove.
+site_url: https://paulsullivan33-dev.github.io/gping-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What a Ping Measures: what-ping-measures.md
+  - Installing gping: installing-gping.md
+  - Your First Graph: your-first-graph.md
+  - Reading the Graph: reading-the-graph.md
+  - Several Targets at Once: several-targets-at-once.md
+  - Colours and Display Options: colours-and-display-options.md
+  - Graph a Command: graph-a-command.md
+  - TCP Mode and the Refusal Trap: tcp-mode-and-the-refusal-trap.md
+  - The Permission Question: the-permission-question.md
+  - Watching a Sick Connection: watching-a-sick-connection.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

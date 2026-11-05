@@ -1,0 +1,37 @@
+How this guide's lab was run, so the transcripts can be judged.
+
+Machine: an Ubuntu 24.04 sandbox (kernel 7.0.0-39), 4 CPUs,
+shared with other work — its load varies, and two captures say
+so in their numbers. gping 1.21.0 was the project's official
+release binary (gping-Linux-gnu-x86_64.tar.gz from the orf/gping
+GitHub releases), run from a scratch folder, not installed
+system-wide.
+
+The sandbox refuses ICMP: its capability bounding set has no
+cap_net_raw and no cap_net_admin, the ping socket group range
+is empty (65534 65534), and both the system ping and a Python
+socket attempt to 127.0.0.1 were refused. gping's ICMP mode
+runs the system ping command and shows its error, so ICMP
+graphing could not be run here at all. Everything else —
+gping's TCP mode and --cmd mode — needs only ordinary sockets
+and processes, and was run for real.
+
+Because gping draws a full-screen terminal display, runs were
+made under a pseudo-terminal with gping-lab/pty-run.py
+(100 columns, 32 rows), which records the raw byte stream and
+then presses q. gping-lab/render.py rebuilds the final screen
+from that stream with the pyte terminal emulator; the .txt
+transcripts are those final screens, and the .raw files beside
+them are the untouched bytes. Statistics quoted in chapters
+are read from the header lines of those final screens.
+
+Fixtures (all in gping-lab/fixtures/, all talking only to
+127.0.0.1): slow-server.py, a web server on port 18091 whose
+/fast page answers at once and whose /slow page waits 300 ms;
+deaf-server.py, which listens on the same port but never
+accepts a connection; steady.sh, which sleeps 0.12 seconds;
+jitter.sh, which sleeps a random 0.04-0.29 seconds; and
+fast-fetch.sh / slow-fetch.sh, which curl the server's two
+pages. curl's own stopwatch gave the server's ground truth
+in the same sitting as the chapter 3 capture: /fast 0.0017 s,
+/slow 0.307 s (transcripts t15 and t03).

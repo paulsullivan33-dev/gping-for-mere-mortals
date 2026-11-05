@@ -1,0 +1,4 @@
+$ curl -s -o /dev/null -w "%{time_total}" http://127.0.0.1:18091/fast
+0.001661
+$ curl -s -o /dev/null -w "%{time_total}" http://127.0.0.1:18091/slow
+0.306821

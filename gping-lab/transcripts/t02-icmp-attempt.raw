@@ -1,0 +1,6 @@
+[2JThere was an error running ping: exit status: 2
+Stderr: ping: socktype: SOCK_RAW
+ping: socket: Operation not permitted
+
+
+[?25h[33;101H

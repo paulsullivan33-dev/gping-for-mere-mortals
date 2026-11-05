@@ -1,0 +1,4 @@
+There was an error running ping: exit status: 2
+                                               Stderr: ping: socktype: SOCK_RAW
+                                                                               ping: socket: Operati
+on not permitted

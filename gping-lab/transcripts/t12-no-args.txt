@@ -1,0 +1,3 @@
+$ gping   (no arguments)
+Error: At least one host or command must be given (i.e gping google.com). Use --help for a full list of arguments.
+exit code: 1

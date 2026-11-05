@@ -1,0 +1,25 @@
+$ gping --version
+gping 1.21.0
+
+$ gping --help (first 12 lines)
+Ping, but with a graph.
+
+Usage: gping [OPTIONS] [HOSTS_OR_COMMANDS]...
+
+Arguments:
+  [HOSTS_OR_COMMANDS]...
+          Hosts or IPs to ping, or commands to run if --cmd is provided. Can use cloud shorthands like aws:eu-west-1
+
+Options:
+      --cmd
+          Graph the execution time for a list of commands rather than pinging hosts
+
+
+$ ping -V
+ping from iputils 20240117
+
+$ python3 --version
+Python 3.12.3
+
+$ uname -sr
+Linux 7.0.0-39-generic
